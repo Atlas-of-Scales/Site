@@ -258,7 +258,7 @@
 
         <div class="dragon-grid">
             <!-- Celtic Dragon -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="celtic">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/celtic.jpg" alt="Celtic Dragon" class="dragon-base" loading="lazy">
                     <img src="assets/dragons/celtic-armoured.jpg" alt="Celtic Dragon Armoured" class="dragon-armoured" loading="lazy">
@@ -278,7 +278,7 @@
             </div>
 
             <!-- Egyptian Wyrm -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="egyptian">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/egyptian.jpg" alt="Egyptian Wyrm" class="dragon-base" loading="lazy">
                     <img src="assets/dragons/egyptian-armoured.jpg" alt="Egyptian Wyrm Armoured" class="dragon-armoured" loading="lazy">
@@ -298,10 +298,14 @@
             </div>
 
             <!-- Norse Lindworm -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="norse">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/norse.jpg" alt="Norse Lindworm" class="dragon-base" loading="lazy">
-                    <img src="assets/dragons/norse-armoured.png" alt="Norse Lindworm Armoured" class="dragon-armoured" loading="lazy">
+                    <img src="assets/dragons/norse.jpg" alt="Norse Lindworm Armoured" class="dragon-armoured" loading="lazy">
+                    <div class="dragon-coming-soon">
+                        <span class="coming-soon-icon">&#x2B22;</span>
+                        <span class="coming-soon-text">Coming Soon</span>
+                    </div>
                 </div>
                 <div class="dragon-info">
                     <h3>Norse Lindworm</h3>
@@ -318,10 +322,14 @@
             </div>
 
             <!-- Incan Amphithere -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="incan">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/incan.jpg" alt="Incan Amphithere" class="dragon-base" loading="lazy">
-                    <img src="assets/dragons/incan-armoured.jpg" alt="Incan Amphithere Armoured" class="dragon-armoured" loading="lazy">
+                    <img src="assets/dragons/incan.jpg" alt="Incan Amphithere Armoured" class="dragon-armoured" loading="lazy">
+                    <div class="dragon-coming-soon">
+                        <span class="coming-soon-icon">&#x2B22;</span>
+                        <span class="coming-soon-text">Coming Soon</span>
+                    </div>
                 </div>
                 <div class="dragon-info">
                     <h3>Incan Amphithere</h3>
@@ -338,10 +346,14 @@
             </div>
 
             <!-- Roman Wyvern -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="roman">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/roman.jpg" alt="Roman Wyvern" class="dragon-base" loading="lazy">
-                    <img src="assets/dragons/roman-armoured.jpg" alt="Roman Wyvern Armoured" class="dragon-armoured" loading="lazy">
+                    <img src="assets/dragons/roman.jpg" alt="Roman Wyvern Armoured" class="dragon-armoured" loading="lazy">
+                    <div class="dragon-coming-soon">
+                        <span class="coming-soon-icon">&#x2B22;</span>
+                        <span class="coming-soon-text">Coming Soon</span>
+                    </div>
                 </div>
                 <div class="dragon-info">
                     <h3>Roman Wyvern</h3>
@@ -358,7 +370,7 @@
             </div>
 
             <!-- Hydra -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="hydra">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/hydra.jpg" alt="Hydra" class="dragon-base" loading="lazy">
                     <img src="assets/dragons/hydra-armoured.jpg" alt="Hydra Armoured" class="dragon-armoured" loading="lazy">
@@ -378,7 +390,7 @@
             </div>
 
             <!-- Mesopotamian Drake -->
-            <div class="dragon-card reveal">
+            <div class="dragon-card reveal" data-dragon="mesopotamian">
                 <div class="dragon-image-wrapper">
                     <img src="assets/dragons/mesopotamian.jpg" alt="Mesopotamian Drake" class="dragon-base" loading="lazy">
                     <img src="assets/dragons/mesopotamian-armoured.jpg" alt="Mesopotamian Drake Armoured" class="dragon-armoured" loading="lazy">
@@ -794,6 +806,12 @@
         </div>
     </div>
 </footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
 
 <script src="js/main.js"></script>
 </body>

@@ -96,6 +96,43 @@
 
     reveals.forEach(el => revealObserver.observe(el));
 
+    /* --- Lightbox --- */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    /* --- Inject Expand Buttons --- */
+    function createExpandBtn() {
+        const btn = document.createElement('button');
+        btn.className = 'expand-btn';
+        btn.setAttribute('aria-label', 'View full size');
+        btn.innerHTML = '&#x2922;';
+        return btn;
+    }
+
     /* --- Dragon Card Armoured Toggle --- */
     document.querySelectorAll('.dragon-card').forEach(card => {
         const buttons = card.querySelectorAll('.dragon-toggle button');
@@ -119,7 +156,34 @@
                     b.classList.toggle('active', b.dataset.variant === (isArmoured ? 'base' : 'armoured'));
                 });
             });
+
+            // Add expand button
+            const expandBtn = createExpandBtn();
+            imageWrapper.appendChild(expandBtn);
+
+            expandBtn.addEventListener('click', e => {
+                e.stopPropagation();
+                // Skip if "Coming Soon" overlay is active
+                const comingSoon = card.querySelector('.dragon-coming-soon');
+                if (comingSoon && card.classList.contains('show-armoured')) return;
+                // Get currently visible variant
+                const isArmoured = card.classList.contains('show-armoured');
+                const img = card.querySelector(isArmoured ? '.dragon-armoured' : '.dragon-base');
+                if (img) openLightbox(img.src, img.alt);
+            });
         }
+    });
+
+    /* --- Unit Card Lightbox --- */
+    document.querySelectorAll('.unit-card-image').forEach(wrapper => {
+        const expandBtn = createExpandBtn();
+        wrapper.appendChild(expandBtn);
+
+        // Click image or expand button opens lightbox
+        wrapper.addEventListener('click', () => {
+            const img = wrapper.querySelector('img');
+            if (img) openLightbox(img.src, img.alt);
+        });
     });
 
     /* --- Biome Unit Tabs --- */
