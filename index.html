@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas of Scales — Build Your Empire. Raise Your Dragon.</title>
+    <meta name="description" content="Atlas of Scales is a 2.5D online multiplayer strategy game where you build cities, raise dragons, and conquer a seamless hex-grid world across a vast hex-grid world of diverse civilizations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="nav">
+    <div class="container nav-inner">
+        <a href="#hero" class="nav-logo">
+            <img src="assets/logo.jpg" alt="Atlas of Scales">
+        </a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#world">World</a>
+            <a href="#city">City</a>
+            <a href="#dragons">Dragons</a>
+            <a href="#combat">Combat</a>
+            <a href="#alliances">Alliances</a>
+            <a href="#espionage">Espionage</a>
+            <a href="#devlog">Follow</a>
+        </div>
+        <div class="nav-social">
+            <a href="https://www.instagram.com/atlasofscales/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://twitter.com/AtlasOfScales" target="_blank" rel="noopener" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="mobile-overlay">
+    <a href="#about">About</a>
+    <a href="#world">World</a>
+    <a href="#city">City</a>
+    <a href="#dragons">Dragons</a>
+    <a href="#combat">Combat</a>
+    <a href="#alliances">Alliances</a>
+    <a href="#espionage">Espionage</a>
+    <a href="#devlog">Follow</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <img src="assets/logo.jpg" alt="Atlas of Scales" class="hero-logo" loading="eager">
+        <h1>Build your empire. Raise your dragon. Conquer the world.</h1>
+        <p class="hero-subtitle">A 2.5D online multiplayer strategy game set in a seamless hex-grid world of many civilizations, mythical beasts, and endless ambition.</p>
+        <div class="hero-cta">
+            <a href="#world" class="btn btn-primary">Explore the World</a>
+            <a href="#devlog" class="btn btn-outline">Follow Development</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about">
+    <div class="container">
+        <div class="about-grid reveal">
+            <div class="about-text">
+                <span class="section-label">About the Game</span>
+                <h2>Your Empire, Your Rules</h2>
+                <p>Atlas of Scales drops you into a persistent, seamless world where thousands of players compete for territory, resources, and glory. Build your city from the ground up, develop a thriving economy, train armies drawn from your civilization's mythology, and raise a dragon that will become your most devastating weapon.</p>
+                <p>There is no finish line. No final boss. Only the empires you build, the alliances you forge, and the wars you wage across a living world that never stops evolving.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/concepts/city-view.jpg" alt="City view concept art" loading="lazy">
+            </div>
+        </div>
+
+        <div class="feature-cards reveal">
+            <div class="feature-card">
+                <span class="feature-icon">&#x2B22;</span>
+                <h3>Seamless World</h3>
+                <p>One continuous 3,000-hex map with no loading screens. Multiple biomes, each with unique resources, units, and civilizations. Expand your territory across a world that grows over time.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">&#x2694;</span>
+                <h3>Strategic Depth</h3>
+                <p>Dozens of unique units across multiple civilizations, terrain-based combat modifiers, staggered battle arrivals, and a dragon that changes everything. Every decision matters.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">&#x2696;</span>
+                <h3>Fair Play</h3>
+                <p>Cosmetics-only monetisation. No pay-to-win, no shortcuts. Every player earns their empire through strategy, patience, and skill. Dragon Scales are purely cosmetic.</p>
+            </div>
+        </div>
+
+        <ul class="about-bullets reveal">
+            <li>No win condition — endless sandbox with optional server resets</li>
+            <li>Cities are permanent — they can never be destroyed or captured</li>
+            <li>Maximum 24-hour build time on any single construction</li>
+            <li>Auto-battle combat driven by unit composition and terrain</li>
+            <li>Server-authoritative — no cheating, no hacking</li>
+            <li>Real-time multiplayer with WebSocket-driven updates</li>
+        </ul>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     WORLD
+     ============================================================ -->
+<section id="world">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">The World</span>
+            <h2>Explore the Biomes</h2>
+            <p>A procedurally generated hex-grid world where geography shapes strategy. Each biome favours different resources, creating natural trade routes and economic interdependence between civilizations.</p>
+        </div>
+
+        <img src="assets/concepts/outer-city-view.jpg" alt="Outer city and world view" class="world-banner reveal" loading="lazy">
+
+        <div class="biome-grid reveal">
+            <div class="biome-card biome-grasslands">
+                <h3>Grasslands</h3>
+                <div class="civ-name">Celtic Civilization</div>
+                <p>Rolling green hills and ancient forests. A balanced homeland providing steady resources — the perfect starting ground for any empire.</p>
+            </div>
+            <div class="biome-card biome-desert">
+                <h3>Desert</h3>
+                <div class="civ-name">Egyptian Civilization</div>
+                <p>Sun-scorched dunes hiding buried treasures. Sandstone and minerals abound, but water and wood must be traded for.</p>
+            </div>
+            <div class="biome-card biome-ice">
+                <h3>Ice</h3>
+                <div class="civ-name">Norse Civilization</div>
+                <p>Frozen tundras and dense boreal forests. A wood-rich domain where only the hardiest civilizations dare to settle.</p>
+            </div>
+            <div class="biome-card biome-mountains">
+                <h3>Mountains</h3>
+                <div class="civ-name">Incan Civilization</div>
+                <p>Towering peaks and deep quarries. A stone powerhouse with natural fortress defenses that make invaders think twice.</p>
+            </div>
+            <div class="biome-card biome-lava">
+                <h3>Lava</h3>
+                <div class="civ-name">Roman Civilization</div>
+                <p>Volcanic wastelands of fire and obsidian. The harshest biome demands total self-sufficiency — but rewards with unmatched defense.</p>
+            </div>
+            <div class="biome-card biome-badlands">
+                <h3>Badlands</h3>
+                <div class="civ-name">Mesopotamian Civilization</div>
+                <p>Cracked earth and rocky scrubland. A harsh but survivable land where tenacious civilizations carve empires from dust.</p>
+            </div>
+            <div class="biome-card biome-water">
+                <h3>Water</h3>
+                <div class="civ-name">Greek Civilization</div>
+                <p>Vast oceans, shimmering lakes, and winding rivers. Abundant food fuels rapid growth, and naval mastery controls the tides of war.</p>
+            </div>
+        </div>
+
+        <div class="world-subsections reveal">
+            <div class="world-subsection">
+                <h3>Territory &amp; Influence</h3>
+                <p>Your empire's reach extends through a zone-of-influence system. As your city grows, your territory expands outward, granting access to new resource tiles and strategic positions. Overlapping influence zones create natural flashpoints for conflict and diplomacy.</p>
+            </div>
+            <div class="world-subsection">
+                <h3>Continental Drift</h3>
+                <p>The world grows. When new biomes are introduced, the entire map expands through continental drift — existing territories shift outward and new terrain fills the gaps. Your empire migrates seamlessly, and fresh frontiers emerge between established civilizations.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CITY BUILDING
+     ============================================================ -->
+<section id="city">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">City Building</span>
+            <h2>From Settlement to Empire</h2>
+            <p>Every empire begins with a single city. Expand your capital, establish outposts across the map, and build an economy that fuels your ambitions.</p>
+        </div>
+
+        <div class="city-block reveal">
+            <div class="city-block-text">
+                <h3>Inner City</h3>
+                <p>Your capital starts as a modest 9-hex settlement and grows to a sprawling 59-tile metropolis. Place buildings strategically — Town Hall, Barracks, Labs, Housing, Hospitals, Warehouses, and the secretive Shadowhouse — each contributing to your empire's power.</p>
+                <p>Manage multiple construction projects simultaneously by allocating build weights. No single build takes longer than 24 hours, keeping you engaged without endless waiting.</p>
+            </div>
+            <div class="city-block-image">
+                <img src="assets/concepts/city-view.jpg" alt="Inner city view" loading="lazy">
+            </div>
+        </div>
+
+        <div class="city-block reverse reveal">
+            <div class="city-block-text">
+                <h3>Economy &amp; Resources</h3>
+                <p>Four core resources — Wood, Stone, Food, and Gold — form the backbone of your economy. Each biome produces resources at different rates, creating natural trade dependencies between civilizations.</p>
+                <p>Gold comes exclusively from taxation. Set your tax rate carefully: too high and your population declines, too low and your coffers run dry. Special biome-unique resources unlock advanced buildings and elite troops.</p>
+            </div>
+            <div class="city-block-image">
+                <img src="assets/concepts/outer-city-view.jpg" alt="Outer city and economy" loading="lazy">
+            </div>
+        </div>
+
+        <div class="city-features reveal">
+            <div class="city-feature">
+                <h4>Research</h4>
+                <p>Eight tech categories spanning Military, Resources, City, Hospital, Espionage, and biome specializations. All labs across your empire contribute to a shared research pool.</p>
+            </div>
+            <div class="city-feature">
+                <h4>Outposts</h4>
+                <p>Establish secondary cities across the map to claim distant resource tiles and project power into new biomes.</p>
+            </div>
+            <div class="city-feature">
+                <h4>Mastery</h4>
+                <p>Completed all standard research? Mastery techs offer infinite progression with escalating costs — the ultimate endgame resource sink.</p>
+            </div>
+            <div class="city-feature">
+                <h4>Convoys</h4>
+                <p>Transport resources between your cities via convoys. Route choice matters — fast routes risk enemy territory, safe routes take longer.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     DRAGONS
+     ============================================================ -->
+<section id="dragons">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Dragons</span>
+            <h2>Raise Your Dragon</h2>
+            <p>Every civilization bonds with a unique dragon species. Raise yours from egg to battle-ready adult, equip it with armour, and unleash it as the centrepiece of your army. Click any dragon to see its armoured form. More dragons yet to be revealed...</p>
+        </div>
+
+        <div class="dragon-grid">
+            <!-- Celtic Dragon -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/celtic.jpg" alt="Celtic Dragon" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/celtic-armoured.jpg" alt="Celtic Dragon Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Celtic Dragon</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Grasslands</span>
+                        <span class="dragon-identity-tag">Balanced Generalist</span>
+                    </div>
+                    <p>Born of ancient myth, equally adept in all forms of combat. The perfect companion for commanders who value versatility above all else.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+            <!-- Egyptian Wyrm -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/egyptian.jpg" alt="Egyptian Wyrm" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/egyptian-armoured.jpg" alt="Egyptian Wyrm Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Egyptian Wyrm</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Desert</span>
+                        <span class="dragon-identity-tag">Glass Cannon</span>
+                    </div>
+                    <p>A precision striker wielding the scorching fury of the desert sun. Lightning-fast attacks decimate enemies before they can react.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+            <!-- Norse Lindworm -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/norse.jpg" alt="Norse Lindworm" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/norse-armoured.png" alt="Norse Lindworm Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Norse Lindworm</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Ice</span>
+                        <span class="dragon-identity-tag">Frost Artillery</span>
+                    </div>
+                    <p>A frost-breathing siege engine that devastates from extreme range. Its chilling breath freezes entire battalions in their tracks.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+            <!-- Incan Amphithere -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/incan.jpg" alt="Incan Amphithere" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/incan-armoured.jpg" alt="Incan Amphithere Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Incan Amphithere</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Mountains</span>
+                        <span class="dragon-identity-tag">Dive Bomber</span>
+                    </div>
+                    <p>The fastest dragon in the realm, diving from mountain peaks with devastating force. Unmatched speed turns the battlefield into a blur.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+            <!-- Roman Wyvern -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/roman.jpg" alt="Roman Wyvern" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/roman-armoured.jpg" alt="Roman Wyvern Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Roman Wyvern</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Lava</span>
+                        <span class="dragon-identity-tag">Raw Devastation</span>
+                    </div>
+                    <p>The most destructive dragon alive, forged in volcanic fire. Its raw power output exceeds all other dragons combined.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+            <!-- Hydra -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/hydra.jpg" alt="Hydra" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/hydra-armoured.jpg" alt="Hydra Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Hydra</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Water</span>
+                        <span class="dragon-identity-tag">Biome Adaptive</span>
+                    </div>
+                    <p>A shape-shifting terror equally lethal on land and sea. Its multiple heads strike from every angle, adapting to any battlefield.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+            <!-- Mesopotamian Drake -->
+            <div class="dragon-card reveal">
+                <div class="dragon-image-wrapper">
+                    <img src="assets/dragons/mesopotamian.jpg" alt="Mesopotamian Drake" class="dragon-base" loading="lazy">
+                    <img src="assets/dragons/mesopotamian-armoured.jpg" alt="Mesopotamian Drake Armoured" class="dragon-armoured" loading="lazy">
+                </div>
+                <div class="dragon-info">
+                    <h3>Mesopotamian Drake</h3>
+                    <div class="dragon-meta">
+                        <span class="dragon-biome-tag">Badlands</span>
+                        <span class="dragon-identity-tag">Unstoppable Tank</span>
+                    </div>
+                    <p>An unkillable tank that absorbs punishment others cannot survive. Its impenetrable scales make it the ultimate defensive weapon.</p>
+                </div>
+                <div class="dragon-toggle">
+                    <button class="active" data-variant="base">Base</button>
+                    <button data-variant="armoured">Armoured</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dragon Lifecycle -->
+        <div class="dragon-lifecycle reveal">
+            <div class="lifecycle-stage">
+                <div class="stage-name">Egg</div>
+                <div class="stage-level">Hatchery</div>
+            </div>
+            <div class="lifecycle-arrow">&#x2192;</div>
+            <div class="lifecycle-stage">
+                <div class="stage-name">Baby</div>
+                <div class="stage-level">Lv 1 &ndash; 3</div>
+            </div>
+            <div class="lifecycle-arrow">&#x2192;</div>
+            <div class="lifecycle-stage">
+                <div class="stage-name">Juvenile</div>
+                <div class="stage-level">Lv 4 &ndash; 7</div>
+            </div>
+            <div class="lifecycle-arrow">&#x2192;</div>
+            <div class="lifecycle-stage">
+                <div class="stage-name">Adult</div>
+                <div class="stage-level">Lv 8 &ndash; 12</div>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     COMBAT & UNITS
+     ============================================================ -->
+<section id="combat">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Combat &amp; Units</span>
+            <h2>Build Your Army</h2>
+            <p>Auto-battle combat driven by unit composition, terrain, and timing. Choose your army wisely — every unit arrives at different speeds, and the battlefield shifts with each wave.</p>
+        </div>
+
+        <div class="combat-mechanics reveal">
+            <div class="mechanic-card">
+                <h3>Staggered Arrival</h3>
+                <p>Units arrive in waves based on speed. Fast scouts engage first; heavy siege follows. Army composition determines the rhythm of battle.</p>
+            </div>
+            <div class="mechanic-card">
+                <h3>Terrain Adaptation</h3>
+                <p>Every biome modifies combat. Mountains grant +25% defense. Lava terrain gives +30%. Attackers slow down in harsh terrain, giving defenders a critical edge.</p>
+            </div>
+            <div class="mechanic-card">
+                <h3>Layered Defense</h3>
+                <p>Cities are protected by walls, dragon auto-defense, allied garrisons, and terrain bonuses. Breaking through requires overwhelming force — or clever tactics.</p>
+            </div>
+        </div>
+
+        <!-- Biome Tabs -->
+        <div class="biome-tabs reveal">
+            <button class="tab-btn active" data-biome="grassland">Grasslands</button>
+            <button class="tab-btn" data-biome="desert">Desert</button>
+            <button class="tab-btn" data-biome="ice">Ice</button>
+            <button class="tab-btn" data-biome="mountains">Mountains</button>
+            <button class="tab-btn" data-biome="lava">Lava</button>
+            <button class="tab-btn" data-biome="badlands">Badlands</button>
+            <button class="tab-btn" data-biome="water">Water</button>
+        </div>
+
+        <!-- Grassland -->
+        <div class="tab-panel active" data-biome="grassland">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/clansman.jpg" alt="Clansman" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Clansman</h4><p>Light Infantry</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/longbowman.jpg" alt="Longbowman" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Longbowman</h4><p>Ranged Archer</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/gallowglass.jpg" alt="Gallowglass" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Gallowglass</h4><p>Heavy Infantry</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/oathsworn.png" alt="Oathsworn" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Oathsworn</h4><p>Elite Guardian</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/druids-wrath.jpg" alt="Druid's Wrath" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Druid's Wrath</h4><p>Magical Siege</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/fae-drake.png" alt="Fae Drake" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Fae Drake</h4><p>Swift Flyer</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/cernunnos-stag.jpg" alt="Cernunnos Stag" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Cernunnos Stag</h4><p>Sacred Cavalry</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/grassland/rider-of-the-sidhe.jpg" alt="Rider of the Sidhe" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Rider of the Sidhe</h4><p>Elite Cavalry</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desert -->
+        <div class="tab-panel" data-biome="desert">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/desert/sphinx.jpg" alt="Sphinx" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Sphinx</h4><p>Armoured Guardian</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/desert/bennu.jpg" alt="Bennu" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Bennu</h4><p>Sacred Flyer</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/desert/horuss-talon.jpg" alt="Horus's Talon" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Horus's Talon</h4><p>Swift Striker</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/desert/chariot-of-sekhmet.jpg" alt="Chariot of Sekhmet" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Chariot of Sekhmet</h4><p>War Chariot</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ice -->
+        <div class="tab-panel" data-biome="ice">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/ice/draugr.jpg" alt="Draugr" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Draugr</h4><p>Undead Infantry</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/ice/skadis-fang.jpg" alt="Skadi's Fang" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Skadi's Fang</h4><p>Frost Archer</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/ice/hrimfaxi.jpg" alt="Hrimfaxi" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Hrimfaxi</h4><p>Shadow Cavalry</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/ice/niflheim-engine.jpg" alt="Niflheim Engine" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Niflheim Engine</h4><p>Frost Siege</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mountains -->
+        <div class="tab-panel" data-biome="mountains">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/mountains/rumi-sonqo.jpg" alt="Rumi Sonqo" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Rumi Sonqo</h4><p>Stone Heart Warrior</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/mountains/pachamamas-fist.jpg" alt="Pachamama's Fist" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Pachamama's Fist</h4><p>Earth Striker</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/mountains/illapa.jpg" alt="Illapa" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Illapa</h4><p>Lightning Caller</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/mountains/stone-amaru.jpg" alt="Stone Amaru" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Stone Amaru</h4><p>Mountain Serpent</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lava -->
+        <div class="tab-panel" data-biome="lava">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/lava/colossus-of-mars.jpg" alt="Colossus of Mars" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Colossus of Mars</h4><p>War Colossus</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/lava/fury-of-bellona.jpg" alt="Fury of Bellona" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Fury of Bellona</h4><p>Battle Priestess</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/lava/jupiters-bolt.jpg" alt="Jupiter's Bolt" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Jupiter's Bolt</h4><p>Thunder Siege</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/lava/vulcans-forge-beast.jpg" alt="Vulcan's Forge-Beast" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Vulcan's Forge-Beast</h4><p>Molten Beast</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badlands -->
+        <div class="tab-panel" data-biome="badlands">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/badlands/enkidu.jpg" alt="Enkidu" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Enkidu</h4><p>Wild Warrior</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/badlands/lamassu.jpg" alt="Lamassu" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Lamassu</h4><p>Winged Guardian</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/badlands/mushussu.jpg" alt="Mushussu" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Mushussu</h4><p>Dragon Beast</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/badlands/ishtars-rain.jpg" alt="Ishtar's Rain" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Ishtar's Rain</h4><p>Divine Artillery</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water -->
+        <div class="tab-panel" data-biome="water">
+            <div class="unit-grid">
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/water/triton.jpg" alt="Triton" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Triton</h4><p>Ocean Warrior</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/water/minotaur.jpg" alt="Minotaur" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Minotaur</h4><p>Brutal Champion</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/water/apollos-lens.jpg" alt="Apollo's Lens" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Apollo's Lens</h4><p>Solar Cannon</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/water/aspidochelone.jpg" alt="Aspidochelone" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Aspidochelone</h4><p>Living Fortress</p></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ALLIANCES
+     ============================================================ -->
+<section id="alliances">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Alliances</span>
+            <h2>Strength in Numbers</h2>
+            <p>Form alliances, build a shared headquarters on the world map, and project collective power across the realm. Together, you control territory that no solo player can threaten.</p>
+        </div>
+
+        <div class="alliance-grid reveal">
+            <div class="alliance-card">
+                <h3>Alliance HQ</h3>
+                <p>A physical building placed on the world map adjacent to your members' influence zones. Upgrade it to expand your member cap from 5 to 50 and unlock shared territory yield bonuses up to +25%.</p>
+            </div>
+            <div class="alliance-card">
+                <h3>The Gauntlet</h3>
+                <p>Enemy convoys passing through your alliance territory take automatic ranged fire from gauntlet structures. Your own members move freely. Control the map, control the supply lines.</p>
+            </div>
+            <div class="alliance-card">
+                <h3>Shared Vision</h3>
+                <p>Alliance members automatically share real-time vision. The union of all member influence zones becomes your alliance's detection network — a well-positioned alliance has no blind spots.</p>
+            </div>
+            <div class="alliance-card">
+                <h3>Alliance Projects</h3>
+                <p>Fund collective infrastructure: Roadway Networks for faster convoys, War Academies for quicker training, and Shared Vaults for reduced transit taxes and emergency resource storage.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ESPIONAGE
+     ============================================================ -->
+<section id="espionage">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Espionage</span>
+            <h2>Knowledge is Power</h2>
+            <p>Train spies to infiltrate enemy cities and uncover their secrets. Three tiers of operatives, each with escalating intelligence capabilities and risk.</p>
+        </div>
+
+        <div class="spy-tiers reveal">
+            <div class="spy-card">
+                <span class="spy-tier-badge">Tier I</span>
+                <h3>Informant</h3>
+                <p>Cheap and disposable. Deploy them in numbers to build an intelligence network. The more you place, the more you learn. Canary alerts warn you when your own spies are detected.</p>
+            </div>
+            <div class="spy-card">
+                <span class="spy-tier-badge">Tier II</span>
+                <h3>Agent</h3>
+                <p>The balanced workhorse of your spy network. Moderate cost, significant intelligence value. Agents provide the steady flow of information that drives smart strategic decisions.</p>
+            </div>
+            <div class="spy-card">
+                <span class="spy-tier-badge">Tier III</span>
+                <h3>Spymaster</h3>
+                <p>Elite operatives. Expensive to train but devastatingly efficient. A single Spymaster produces more intelligence than a squad of Informants — and is harder to detect.</p>
+            </div>
+        </div>
+
+        <div class="section-header reveal">
+            <h3>Intelligence Tiers</h3>
+            <p>The more intelligence you gather on a target, the more you uncover.</p>
+        </div>
+
+        <div class="intel-tiers reveal">
+            <div class="intel-tier">
+                <h4>Tier 1</h4>
+                <div class="tier-threshold">Basic</div>
+                <p>Dragon type, approximate population, building count</p>
+            </div>
+            <div class="intel-tier">
+                <h4>Tier 2</h4>
+                <div class="tier-threshold">Moderate</div>
+                <p>Building types, resource rates, recent attack status</p>
+            </div>
+            <div class="intel-tier">
+                <h4>Tier 3</h4>
+                <div class="tier-threshold">Advanced</div>
+                <p>Building levels, troop composition, tech research, dragon armour status</p>
+            </div>
+            <div class="intel-tier">
+                <h4>Tier 4</h4>
+                <div class="tier-threshold">Complete</div>
+                <p>Exact troop counts, exact stockpiles, full attack details, wall assignments</p>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOLLOW DEVELOPMENT
+     ============================================================ -->
+<section id="devlog">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Follow Development</span>
+            <h2>Stay in the Loop</h2>
+            <p>Atlas of Scales is actively in development. Follow along for behind-the-scenes updates, design reveals, and progress reports.</p>
+        </div>
+
+        <div class="devlog-content reveal">
+            <div class="social-links">
+                <a href="https://www.instagram.com/atlasofscales/" target="_blank" rel="noopener" class="social-link">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    @atlasofscales
+                </a>
+                <a href="https://twitter.com/AtlasOfScales" target="_blank" rel="noopener" class="social-link">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    @AtlasOfScales
+                </a>
+            </div>
+            <p class="email-placeholder">Email newsletter coming soon.</p>
+        </div>
+
+        <div class="section-divider"><div class="hex"></div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="assets/logo.jpg" alt="Atlas of Scales">
+                <p>Build your empire. Raise your dragon.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#world">World</a>
+                <a href="#dragons">Dragons</a>
+                <a href="#combat">Combat</a>
+                <a href="#alliances">Alliances</a>
+                <a href="#devlog">Follow</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/atlasofscales/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://twitter.com/AtlasOfScales" target="_blank" rel="noopener" aria-label="Twitter / X">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Atlas of Scales. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
