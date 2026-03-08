@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlas of Scales — Build Your Empire. Raise Your Dragon.</title>
-    <meta name="description" content="Atlas of Scales is a 2.5D online multiplayer strategy game where you build cities, raise dragons, and conquer a seamless hex-grid world across a vast hex-grid world of diverse civilizations.">
+    <meta name="description" content="Atlas of Scales is a 2.5D online multiplayer strategy game where you build cities, raise dragons, and conquer a seamless hex-grid world of diverse civilizations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,6 +12,9 @@
     <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
 </head>
 <body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scroll-progress"></div>
 
 <!-- ============================================================
      NAVIGATION
@@ -96,17 +99,17 @@
 
         <div class="feature-cards reveal">
             <div class="feature-card">
-                <span class="feature-icon">&#x2B22;</span>
+                <span class="feature-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 3L32 10.5V25.5L18 33L4 25.5V10.5L18 3Z"/></svg></span>
                 <h3>Seamless World</h3>
                 <p>One continuous hex-grid world spanning multiple biomes, each with unique resources, units, and civilizations. Expand your territory across a world that grows over time.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">&#x2694;</span>
+                <span class="feature-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 4l12 12M28 4L16 16"/><path d="M14 20l-6 6 2 2 6-6M22 20l6 6-2 2-6-6"/></svg></span>
                 <h3>Strategic Depth</h3>
                 <p>Dozens of unique units across multiple civilizations, terrain that shapes every battle, and a dragon that changes everything. Every decision matters.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">&#x2696;</span>
+                <span class="feature-icon"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4v24M8 10h20M8 10L4 20h8L8 10zM28 10l-4 10h8l-4-10zM14 28h8"/></svg></span>
                 <h3>Fair Play</h3>
                 <p>Cosmetics-only monetisation. No pay-to-win, no shortcuts. Every player earns their empire through strategy, patience, and skill. Dragon Scales are purely cosmetic.</p>
             </div>
@@ -467,182 +470,166 @@
         </div>
 
         <!-- Biome Tabs -->
-        <div class="biome-tabs reveal">
-            <button class="tab-btn active" data-biome="grassland">Grasslands</button>
-            <button class="tab-btn" data-biome="desert">Desert</button>
-            <button class="tab-btn" data-biome="ice">Ice</button>
-            <button class="tab-btn" data-biome="mountains">Mountains</button>
-            <button class="tab-btn" data-biome="lava">Lava</button>
-            <button class="tab-btn" data-biome="badlands">Badlands</button>
-            <button class="tab-btn" data-biome="water">Water</button>
+        <div class="biome-tabs reveal" role="tablist" aria-label="Biome unit roster">
+            <button class="tab-btn active" data-biome="grassland" role="tab" aria-selected="true" tabindex="0">Grasslands</button>
+            <button class="tab-btn" data-biome="desert" role="tab" aria-selected="false" tabindex="-1">Desert</button>
+            <button class="tab-btn" data-biome="ice" role="tab" aria-selected="false" tabindex="-1">Ice</button>
+            <button class="tab-btn" data-biome="mountains" role="tab" aria-selected="false" tabindex="-1">Mountains</button>
+            <button class="tab-btn" data-biome="lava" role="tab" aria-selected="false" tabindex="-1">Lava</button>
+            <button class="tab-btn" data-biome="badlands" role="tab" aria-selected="false" tabindex="-1">Badlands</button>
+            <button class="tab-btn" data-biome="water" role="tab" aria-selected="false" tabindex="-1">Water</button>
         </div>
 
-        <!-- Grassland -->
-        <div class="tab-panel active" data-biome="grassland">
+        <!-- Grassland — Celtic (4 units) -->
+        <div class="tab-panel active" data-biome="grassland" role="tabpanel">
             <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/clansman.jpg" alt="Clansman" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Clansman</h4><p>Light Infantry</p></div>
+                    <div class="unit-card-image"><img src="assets/units/grassland/fae-drake.png" alt="Fae Drake — iridescent swift flyer used as a T1 transport carrier in the Celtic grassland army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Fae Drake</h4><p>Iridescent Swift Flyer</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/longbowman.jpg" alt="Longbowman" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Longbowman</h4><p>Ranged Archer</p></div>
+                    <div class="unit-card-image"><img src="assets/units/grassland/cernunnos-stag.jpg" alt="Cernunnos Stag — crystalline majesty beast serving as a T3 transport carrier in the Celtic grassland army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Cernunnos Stag</h4><p>Crystalline Majesty</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/gallowglass.jpg" alt="Gallowglass" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Gallowglass</h4><p>Heavy Infantry</p></div>
+                    <div class="unit-card-image"><img src="assets/units/grassland/oathsworn.png" alt="Oathsworn — sacred stone guardian, a T3 melee combat unit in the Celtic grassland army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Oathsworn</h4><p>Sacred Stone Guardian</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/oathsworn.png" alt="Oathsworn" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Oathsworn</h4><p>Elite Guardian</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/war-druid.jpg" alt="War Druid" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>War Druid</h4><p>Magical Siege</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/fae-drake.png" alt="Fae Drake" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Fae Drake</h4><p>Swift Flyer</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/cernunnos-stag.jpg" alt="Cernunnos Stag" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Cernunnos Stag</h4><p>Sacred Cavalry</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/grassland/rider-of-the-sidhe.jpg" alt="Rider of the Sidhe" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Rider of the Sidhe</h4><p>Elite Cavalry</p></div>
+                    <div class="unit-card-image"><img src="assets/units/grassland/war-druid.jpg" alt="War Druid — druidic flame engine, a T2 siege combat unit in the Celtic grassland army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>War Druid</h4><p>Druidic Flame Engine</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- Desert -->
-        <div class="tab-panel" data-biome="desert">
+        <!-- Desert — Egyptian (4 units) -->
+        <div class="tab-panel" data-biome="desert" role="tabpanel">
             <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/desert/sphinx.jpg" alt="Sphinx" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Sphinx</h4><p>Armoured Guardian</p></div>
+                    <div class="unit-card-image"><img src="assets/units/desert/bennu.jpg" alt="Bennu — sacred phoenix courier, a T1 transport carrier in the Egyptian desert army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Bennu</h4><p>Sacred Phoenix Courier</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/desert/bennu.jpg" alt="Bennu" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Bennu</h4><p>Sacred Flyer</p></div>
+                    <div class="unit-card-image"><img src="assets/units/desert/scarab-of-khepri.jpg" alt="Scarab of Khepri — divine solar colossus, a T3 transport carrier in the Egyptian desert army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Scarab of Khepri</h4><p>Divine Solar Colossus</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/desert/horus-falcon.jpg" alt="Horus Falcon" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Horus Falcon</h4><p>Swift Striker</p></div>
+                    <div class="unit-card-image"><img src="assets/units/desert/sphinx.jpg" alt="Sphinx — awakened stone guardian, a T3 siege combat unit in the Egyptian desert army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Sphinx</h4><p>Awakened Stone Guardian</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/desert/chariot-of-sekhmet.jpg" alt="Chariot of Sekhmet" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Chariot of Sekhmet</h4><p>War Chariot</p></div>
+                    <div class="unit-card-image"><img src="assets/units/desert/neith.jpg" alt="Neith — divine precision archer, a T1 ranged combat unit in the Egyptian desert army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Neith</h4><p>Divine Precision Archer</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- Ice -->
-        <div class="tab-panel" data-biome="ice">
+        <!-- Ice — Norse (4 units) -->
+        <div class="tab-panel" data-biome="ice" role="tabpanel">
             <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/ice/draugr.jpg" alt="Draugr" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Draugr</h4><p>Undead Infantry</p></div>
+                    <div class="unit-card-image"><img src="assets/units/ice/frost-whelp.jpg" alt="Frost Whelp — young drake transport, a T2 carrier in the Norse ice army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Frost Whelp</h4><p>Young Drake Transport</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/ice/jotunn.jpg" alt="Jotunn" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Jotunn</h4><p>Frost Archer</p></div>
+                    <div class="unit-card-image"><img src="assets/units/ice/hrimfaxi.jpg" alt="Hrimfaxi — divine frost horse, a T3 transport carrier in the Norse ice army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Hrimfaxi</h4><p>Divine Frost Horse</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/ice/hrimfaxi.jpg" alt="Hrimfaxi" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Hrimfaxi</h4><p>Shadow Cavalry</p></div>
+                    <div class="unit-card-image"><img src="assets/units/ice/frost-drake.jpg" alt="Frost Drake — crystalline war beast, a T3 melee combat unit in the Norse ice army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Frost Drake</h4><p>Crystalline War Beast</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/ice/niflheim-engine.jpg" alt="Niflheim Engine" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Niflheim Engine</h4><p>Frost Siege</p></div>
+                    <div class="unit-card-image"><img src="assets/units/ice/valkyrie.jpg" alt="Valkyrie — sky javelin maiden, a T2 ranged combat unit in the Norse ice army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Valkyrie</h4><p>Sky Javelin Maiden</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- Mountains -->
-        <div class="tab-panel" data-biome="mountains">
+        <!-- Mountains — Incan (4 units) -->
+        <div class="tab-panel" data-biome="mountains" role="tabpanel">
             <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/mountains/rumi-sonqo.jpg" alt="Rumi Sonqo" loading="lazy"></div>
+                    <div class="unit-card-image"><img src="assets/units/mountains/stone-amaru.jpg" alt="Stone Amaru — serpent earth guardian, a T2 transport carrier in the Incan mountain army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Stone Amaru</h4><p>Serpent Earth Guardian</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/mountains/ukuku.jpg" alt="Ukuku — blind underworld beast, a T3 transport carrier in the Incan mountain army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Ukuku</h4><p>Blind Underworld Beast</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/mountains/rumi-sonqo.jpg" alt="Rumi Sonqo — stone heart warrior, a T3 melee combat unit in the Incan mountain army" loading="lazy"></div>
                     <div class="unit-card-info"><h4>Rumi Sonqo</h4><p>Stone Heart Warrior</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/mountains/huanca.jpg" alt="Huanca" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Huanca</h4><p>Earth Striker</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/mountains/illapa.jpg" alt="Illapa" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Illapa</h4><p>Lightning Caller</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/mountains/stone-amaru.jpg" alt="Stone Amaru" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Stone Amaru</h4><p>Mountain Serpent</p></div>
+                    <div class="unit-card-image"><img src="assets/units/mountains/huanca.jpg" alt="Huanca — walking siege monolith, a T3 siege combat unit in the Incan mountain army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Huanca</h4><p>Walking Siege Monolith</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- Lava -->
-        <div class="tab-panel" data-biome="lava">
+        <!-- Lava — Roman (4 units) -->
+        <div class="tab-panel" data-biome="lava" role="tabpanel">
             <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/lava/colossus-of-mars.jpg" alt="Colossus of Mars" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Colossus of Mars</h4><p>War Colossus</p></div>
+                    <div class="unit-card-image"><img src="assets/units/lava/lacerta.jpg" alt="Lacerta — fire lizard beast, a T1 transport carrier in the Roman lava army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Lacerta</h4><p>Fire Lizard Beast</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/lava/fury-of-bellona.jpg" alt="Fury of Bellona" loading="lazy"></div>
+                    <div class="unit-card-image"><img src="assets/units/lava/forge-beast.jpg" alt="Forge Beast — bronze divine automaton, a T2 transport carrier in the Roman lava army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Forge Beast</h4><p>Bronze Divine Automaton</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/lava/colossus-of-mars.jpg" alt="Colossus of Mars — towering war titan, a T3 melee combat unit in the Roman lava army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Colossus of Mars</h4><p>Towering War Titan</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/lava/fury-of-bellona.jpg" alt="Fury of Bellona — battle priestess, a T2 ranged combat unit in the Roman lava army" loading="lazy"></div>
                     <div class="unit-card-info"><h4>Fury of Bellona</h4><p>Battle Priestess</p></div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Badlands — Mesopotamian (4 units) -->
+        <div class="tab-panel" data-biome="badlands" role="tabpanel">
+            <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/lava/thunderbolt.jpg" alt="Thunderbolt" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Thunderbolt</h4><p>Thunder Siege</p></div>
+                    <div class="unit-card-image"><img src="assets/units/badlands/mushussu.jpg" alt="Mushussu — sacred serpent dragon, a T1 transport carrier in the Mesopotamian badlands army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Mushussu</h4><p>Sacred Serpent Dragon</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/lava/forge-beast.jpg" alt="Forge Beast" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Forge Beast</h4><p>Molten Beast</p></div>
+                    <div class="unit-card-image"><img src="assets/units/badlands/bull-of-heaven.jpg" alt="Bull of Heaven — celestial starfire bull, a T3 transport carrier in the Mesopotamian badlands army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Bull of Heaven</h4><p>Celestial Starfire Bull</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/badlands/mushussu-colossus.jpg" alt="Mushussu Colossus — colossal siege dragon, a T2 siege combat unit in the Mesopotamian badlands army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Mushussu Colossus</h4><p>Colossal Siege Dragon</p></div>
+                </div>
+                <div class="unit-card">
+                    <div class="unit-card-image"><img src="assets/units/badlands/lamassu.jpg" alt="Lamassu — winged gate guardian, a T3 melee combat unit in the Mesopotamian badlands army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Lamassu</h4><p>Winged Gate Guardian</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- Badlands -->
-        <div class="tab-panel" data-biome="badlands">
+        <!-- Water — Greek (4 units) -->
+        <div class="tab-panel" data-biome="water" role="tabpanel">
             <div class="unit-grid">
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/badlands/enkidu.jpg" alt="Enkidu" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Enkidu</h4><p>Wild Warrior</p></div>
+                    <div class="unit-card-image"><img src="assets/units/water/aspidochelone.jpg" alt="Aspidochelone — island-sized sea turtle, a T3 transport carrier in the Greek water army" loading="lazy"></div>
+                    <div class="unit-card-info"><span class="unit-badge-transport">Transport</span><h4>Aspidochelone</h4><p>Island-Sized Sea Turtle</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/badlands/lamassu.jpg" alt="Lamassu" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Lamassu</h4><p>Winged Guardian</p></div>
+                    <div class="unit-card-image"><img src="assets/units/water/triton.jpg" alt="Triton — Poseidon's sonic herald, a T3 siege combat unit in the Greek water army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Triton</h4><p>Poseidon's Sonic Herald</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/badlands/mushussu.jpg" alt="Mushussu" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Mushussu</h4><p>Dragon Beast</p></div>
+                    <div class="unit-card-image"><img src="assets/units/water/minotaur.jpg" alt="Minotaur — amphibious bull warrior, a T1 melee combat unit in the Greek water army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Minotaur</h4><p>Amphibious Bull Warrior</p></div>
                 </div>
                 <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/badlands/anzu.jpg" alt="Anzu" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Anzu</h4><p>Divine Artillery</p></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Water -->
-        <div class="tab-panel" data-biome="water">
-            <div class="unit-grid">
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/water/triton.jpg" alt="Triton" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Triton</h4><p>Ocean Warrior</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/water/minotaur.jpg" alt="Minotaur" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Minotaur</h4><p>Brutal Champion</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/water/toxotes.jpg" alt="Toxotes" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Toxotes</h4><p>Solar Cannon</p></div>
-                </div>
-                <div class="unit-card">
-                    <div class="unit-card-image"><img src="assets/units/water/aspidochelone.jpg" alt="Aspidochelone" loading="lazy"></div>
-                    <div class="unit-card-info"><h4>Aspidochelone</h4><p>Living Fortress</p></div>
+                    <div class="unit-card-image"><img src="assets/units/water/toxotes.jpg" alt="Toxotes — divine solar mirror, a T1 ranged combat unit in the Greek water army" loading="lazy"></div>
+                    <div class="unit-card-info"><h4>Toxotes</h4><p>Divine Solar Archer</p></div>
                 </div>
             </div>
         </div>
@@ -796,7 +783,7 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-brand">
-                <img src="assets/logo.jpg" alt="Atlas of Scales">
+                <img src="assets/logo.jpg" alt="Atlas of Scales" loading="lazy">
                 <p>Build your empire. Raise your dragon.</p>
             </div>
             <div class="footer-links">
@@ -818,7 +805,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Atlas of Scales. All rights reserved.</p>
+            <p>&copy; 2026 Atlas of Scales. All rights reserved.</p>
         </div>
     </div>
 </footer>

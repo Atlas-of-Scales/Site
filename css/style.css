@@ -17,7 +17,7 @@
     --card-border: rgba(201, 168, 76, 0.15);
     --nav-height: 70px;
     --max-width: 1200px;
-    --transition: 0.3s ease;
+    --transition: 0.3s ease-out;
 }
 
 /* --- Reset --- */
@@ -69,7 +69,10 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
-h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    text-shadow: 0 0 40px rgba(201, 168, 76, 0.12);
+}
 h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 h4 { font-size: 1rem; }
 
@@ -121,6 +124,11 @@ section:nth-child(even) {
     background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
 }
 
+@keyframes hexPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
 .section-divider .hex {
     width: 18px;
     height: 18px;
@@ -128,6 +136,7 @@ section:nth-child(even) {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     margin: 0 16px;
     flex-shrink: 0;
+    animation: hexPulse 3s ease-in-out infinite;
 }
 
 /* --- Section Header --- */
@@ -156,9 +165,10 @@ section:nth-child(even) {
 }
 
 #nav.scrolled {
-    background: rgba(10, 14, 26, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 14, 26, 0.92);
+    backdrop-filter: blur(12px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .nav-inner {
@@ -336,16 +346,24 @@ section:nth-child(even) {
     padding: 0 20px;
 }
 
+/* Hero entrance animation */
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .hero-logo {
     width: 160px;
     margin: 0 auto 30px;
     border-radius: 12px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    animation: heroFadeUp 0.8s ease-out both;
 }
 
 #hero h1 {
     margin-bottom: 16px;
     text-shadow: 0 2px 30px rgba(0, 0, 0, 0.6);
+    animation: heroFadeUp 0.8s ease-out 0.15s both;
 }
 
 .hero-subtitle {
@@ -355,6 +373,7 @@ section:nth-child(even) {
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+    animation: heroFadeUp 0.8s ease-out 0.3s both;
 }
 
 .hero-cta {
@@ -362,6 +381,7 @@ section:nth-child(even) {
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
+    animation: heroFadeUp 0.8s ease-out 0.45s both;
 }
 
 /* --- Buttons --- */
@@ -380,15 +400,16 @@ section:nth-child(even) {
 }
 
 .btn-primary {
-    background: var(--accent-emerald);
+    background: linear-gradient(135deg, var(--accent-emerald), #247a4d);
     color: #fff;
+    box-shadow: 0 4px 15px rgba(45, 140, 90, 0.25);
 }
 
 .btn-primary:hover {
-    background: #34a066;
+    background: linear-gradient(135deg, #34a066, var(--accent-emerald));
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(45, 140, 90, 0.35);
+    box-shadow: 0 8px 30px rgba(45, 140, 90, 0.45);
 }
 
 .btn-outline {
@@ -447,13 +468,21 @@ section:nth-child(even) {
 
 .feature-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(201, 168, 76, 0.12);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .feature-icon {
-    font-size: 2.2rem;
-    margin-bottom: 16px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--accent-gold);
+}
+
+.feature-icon svg {
+    width: 36px;
+    height: 36px;
 }
 
 .feature-card h3 {
@@ -543,7 +572,8 @@ section:nth-child(even) {
 
 .biome-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3), 0 0 16px rgba(201, 168, 76, 0.1);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .biome-card h3 {
@@ -690,8 +720,18 @@ section:nth-child(even) {
 
 .dragon-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 44px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 14px 44px rgba(0, 0, 0, 0.35), 0 0 20px rgba(201, 168, 76, 0.15);
+    border-color: rgba(201, 168, 76, 0.3);
 }
+
+/* Dragon biome-colored hover glow */
+[data-dragon="celtic"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(74,140,63,0.25); border-color: rgba(74,140,63,0.4); }
+[data-dragon="egyptian"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(201,168,76,0.25); border-color: rgba(201,168,76,0.4); }
+[data-dragon="norse"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(123,175,212,0.25); border-color: rgba(123,175,212,0.4); }
+[data-dragon="incan"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(138,123,107,0.3); border-color: rgba(138,123,107,0.4); }
+[data-dragon="roman"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(201,76,76,0.25); border-color: rgba(201,76,76,0.4); }
+[data-dragon="hydra"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(76,124,201,0.25); border-color: rgba(76,124,201,0.4); }
+[data-dragon="mesopotamian"]:hover { box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 24px rgba(166,124,82,0.25); border-color: rgba(166,124,82,0.4); }
 
 .dragon-image-wrapper {
     position: relative;
@@ -991,7 +1031,8 @@ section:nth-child(even) {
 
 .mechanic-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3), 0 0 16px rgba(201, 168, 76, 0.12);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .mechanic-card h3 {
@@ -1036,6 +1077,7 @@ section:nth-child(even) {
     background: rgba(201, 168, 76, 0.12);
     color: var(--accent-gold);
     border-color: var(--accent-gold);
+    box-shadow: 0 0 12px rgba(201, 168, 76, 0.2);
 }
 
 .tab-panel {
@@ -1063,7 +1105,8 @@ section:nth-child(even) {
 
 .unit-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3), 0 0 16px rgba(201, 168, 76, 0.12);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .unit-card-image {
@@ -1093,6 +1136,21 @@ section:nth-child(even) {
     color: var(--text-secondary);
 }
 
+/* Transport badge */
+.unit-badge-transport {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: rgba(45, 140, 90, 0.2);
+    color: var(--accent-emerald);
+    margin-bottom: 4px;
+}
+
 /* ============================================================
    ALLIANCES
    ============================================================ */
@@ -1112,7 +1170,8 @@ section:nth-child(even) {
 
 .alliance-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3), 0 0 16px rgba(201, 168, 76, 0.12);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .alliance-card h3 {
@@ -1146,7 +1205,8 @@ section:nth-child(even) {
 
 .spy-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(201, 168, 76, 0.12);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .spy-tier-badge {
@@ -1341,12 +1401,26 @@ footer {
 }
 
 /* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-emerald), var(--accent-gold));
+    z-index: 1002;
+    width: 0%;
+    pointer-events: none;
+}
+
+/* ============================================================
    SCROLL REVEAL
    ============================================================ */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .reveal.visible {
@@ -1524,5 +1598,113 @@ footer {
     .tab-btn {
         font-size: 0.7rem;
         padding: 8px 12px;
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .hamburger {
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ============================================================
+   FOCUS VISIBLE
+   ============================================================ */
+:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* ============================================================
+   PREFERS REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-logo,
+    #hero h1,
+    .hero-subtitle,
+    .hero-cta {
+        animation: none;
+    }
+
+    .section-divider .hex {
+        animation: none;
+    }
+
+    .dragon-image-wrapper img {
+        transition: none;
+    }
+
+    .lightbox,
+    .lightbox-img {
+        transition: none;
+    }
+}
+
+/* ============================================================
+   1024px BREAKPOINT (Tablet Landscape)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .combat-mechanics {
+        grid-template-columns: 1fr;
+    }
+
+    .unit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .city-block.reverse {
+        direction: ltr;
+    }
+
+    .spy-tiers {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   1440px BREAKPOINT (Large Desktop)
+   ============================================================ */
+@media (min-width: 1440px) {
+    :root {
+        --max-width: 1320px;
+    }
+
+    .unit-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
     }
 }
